@@ -2,7 +2,7 @@
 
 ## Overview
 
-MIM is a command line GUI torrent application that lets you download torrent files from the internet. As opposed to the general notion that torrents are used for piracy, a lot of stuff on the internet is downloadable through torrents (peer 2 peer networks). For instance, many popular Linux distros are easily downloadable through torrent clients at very fast speeds due to the peer-2-peer network capabilities. We aim to implement such a client, that can download files from the internet through .torrent files and magnet links. It involves deep knowledge of networking and an understanding of peer-2-peer communication using the BitTorrent protocol.
+MIM is a command line torrent application that lets you download torrent files from the internet. As opposed to the general notion that torrents are used for piracy, a lot of stuff on the internet is downloadable through torrents (peer 2 peer networks). For instance, many popular Linux distros are easily downloadable through torrent clients at very fast speeds due to the peer-2-peer network capabilities. We aim to implement such a client, that can download files from the internet through .torrent files. It involves deep knowledge of networking and an understanding of peer-2-peer communication using the BitTorrent protocol.
 
 ## How to install
 
@@ -93,23 +93,6 @@ Set if you are ok to write on top of existing files
 Print help
 ```
 
-## Goals
-
-Build a simple torrent application that doesn't spam you with ads and remains in the terminal using Rust.
-Build a command-line utility for BitTorrent torrent file creation and verification.
-Download popular Linux distros through our client.
-Prerequisites
-Knowledge of programming basics (Go/Rust will be a bonus)
-Interest in networking.
-Familiar with Linux
-The candidate should be eager to learn and ready to put in a focused effort. All other things required to do the project can be learned along the way.
-Learning Objectives
-To inculcate essential software engineering skills such as writing quality code
-Learn Rust language
-Understand concepts of networking, how peer-2-peer communication happens, and how the BitTorrent protocol works.
-Learn asynchronous programming and its application in our networking environment.
-Build a GUI for this application using React
-
 ## Resources
 
 Fundamentals of computer networks
@@ -133,52 +116,18 @@ https://www.techslang.com/torrenting-what-is-it-and-how-does-it-work/
 BitTorrent protocol:
 https://www.bittorrent.org/beps/bep_0003.html
 
-Existing GitHub implementation
-https://github.com/kenpratt/rusty_torrent
-https://github.com/mdiflorio/torrenter
-https://github.com/mandreyel/cratetorrent
-https://github.com/casey/intermodal
-https://github.com/jackpal/Taipei-Torrent
 
-# Milestones
-
-## Things that need to be done before the next meeting
+# Implemrnted
 
 - [x] Reading .torrent files (single-file torrents only)
 - [x] Connecting to a tracker to discover peers
 - [x] Downloading a file from multiple peers in parallel
-- [x] Queueing multiple requests with each peer for faster downloading (aka pipelining)
+- [x] Queueing multiple requests with each peer for faster downloading
 - [x] Uploading files to peers, and seeding existing files from disk
-- [x] Resuming partial downloads
 - [x] Verification of correctness of downloaded chunks
 - [x] Multi-file torrents
-- [x] Connecting to multiple trackers
 - [x] Asynchronous IO on a multithreaded runtime
-- [x] Add tests
 - [x] Setup a listener for seeding to peers.
 - [x] DHT
-
-## TODO
-
-- [ ] Improve error handling and add retries for the tracker
-- [ ] Per-file stats
-- [ ] Per-peer stats
-- [ ] PEX, NAT traversal for more peers
-- [ ] Upload throttling/congestion control
-- [ ] GUI for the terminal
-- [ ] Piece paging/caching
-- [ ] Signaling when completed download
-- Optimizations
-  - [ ] when we have the whole torrent, there's no point talking to peers that also have the whole torrent
-
-```
-
-```
-
-```
-
-```
-
-```
 
 ```
